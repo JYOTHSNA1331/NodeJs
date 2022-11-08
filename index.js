@@ -12,5 +12,5 @@ const data = {
 server.listen(3000)
 
 server.on('connection',(socket)=>{
-    console.log('server connected')
+    console.log('connected successfully')
 })
