@@ -1,16 +1,16 @@
-const express = require('express')
-const app = express()
-
-app.get("/",(req,res)=>{
-    res.send("<h1>Hello World</h1>")
-   
+const http = require('http')
+const server = http.createServer((req,res)=>{
+    res.write('<h1>Hello World</h1>')
+    res.write(data)
 })
 
-app.get("/api/main",(req,res)=>{
-    res.send("<h1>Welcome to Node.js</h1>")
-   
-})
+const data = {
+    fname:'John',
+    lname:'Smith'
+}
 
-app.listen(3600,()=>{
-    console.log("Application is running")
+server.listen(3000)
+
+server.on('connection',(socket)=>{
+    console.log('server connected')
 })
