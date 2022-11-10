@@ -9,7 +9,7 @@ const data = {
     lname:'Smith'
 }
 
-server.listen(3000)
+server.listen(process.env.PORT || 8080)
 
 server.on('connection',(socket)=>{
     console.log('server connected')
