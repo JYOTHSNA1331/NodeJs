@@ -9,8 +9,5 @@ const data = {
     lname:'Smith'
 }
 
-server.listen(process.env.PORT || 8080)
+server.listen(8080)
 
-server.on('connection',(socket)=>{
-    console.log('server connected')
-})
